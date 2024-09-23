@@ -9,6 +9,9 @@ app = Flask(__name__)
 
 
 class Config:
+    """
+    Configures languages to English and French
+    """
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = 'en'
     BABEL_DEFAULT_TIMEZONE = 'UTC'
@@ -29,6 +32,7 @@ def get_locale():
 
 @app.route('/')
 def index():
+    """ Returns render template """
     return render_template('index.html')
 
 
